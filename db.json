@@ -219,6 +219,226 @@
           }
         }
       ]
+    },
+    {
+      "id": "dbe1",
+      "quiz": [
+        {
+          "question": "What is your favorite weather?",
+          "options": [
+            {
+              "emoji": "☀️",
+              "label": "Sunny"
+            },
+            {
+              "emoji": "🌧️",
+              "label": "Rainy"
+            },
+            {
+              "emoji": "❄️",
+              "label": "Snowy"
+            }
+          ],
+          "answer": {
+            "emoji": "❄️",
+            "label": "Snowy"
+          }
+        },
+        {
+          "question": "Which animal do you like the most?",
+          "options": [
+            {
+              "emoji": "🐶",
+              "label": "Dog"
+            },
+            {
+              "emoji": "🐱",
+              "label": "Cat"
+            },
+            {
+              "emoji": "🦁",
+              "label": "Lion"
+            }
+          ],
+          "answer": {
+            "emoji": "🐱",
+            "label": "Cat"
+          }
+        },
+        {
+          "question": "What is your go-to drink?",
+          "options": [
+            {
+              "emoji": "☕",
+              "label": "Coffee"
+            },
+            {
+              "emoji": "🍵",
+              "label": "Tea"
+            },
+            {
+              "emoji": "🥤",
+              "label": "Soda"
+            }
+          ],
+          "answer": {
+            "emoji": "☕",
+            "label": "Coffee"
+          }
+        },
+        {
+          "question": "Which activity do you enjoy the most?",
+          "options": [
+            {
+              "emoji": "🎨",
+              "label": "Painting"
+            },
+            {
+              "emoji": "🎮",
+              "label": "Gaming"
+            },
+            {
+              "emoji": "📚",
+              "label": "Reading"
+            }
+          ],
+          "answer": {
+            "emoji": "📚",
+            "label": "Reading"
+          }
+        },
+        {
+          "question": "Where would you rather go on vacation?",
+          "options": [
+            {
+              "emoji": "🏖️",
+              "label": "Beach"
+            },
+            {
+              "emoji": "🏔️",
+              "label": "Mountains"
+            },
+            {
+              "emoji": "🏙️",
+              "label": "City"
+            }
+          ],
+          "answer": {
+            "emoji": "🏔️",
+            "label": "Mountains"
+          }
+        }
+      ]
+    },
+    {
+      "id": "64ae",
+      "quiz": [
+        {
+          "question": "What is your favorite weather?",
+          "options": [
+            {
+              "emoji": "☀️",
+              "label": "Sunny"
+            },
+            {
+              "emoji": "🌧️",
+              "label": "Rainy"
+            },
+            {
+              "emoji": "❄️",
+              "label": "Snowy"
+            }
+          ],
+          "answer": {
+            "emoji": "❄️",
+            "label": "Snowy"
+          }
+        },
+        {
+          "question": "Which animal do you like the most?",
+          "options": [
+            {
+              "emoji": "🐶",
+              "label": "Dog"
+            },
+            {
+              "emoji": "🐱",
+              "label": "Cat"
+            },
+            {
+              "emoji": "🦁",
+              "label": "Lion"
+            }
+          ],
+          "answer": {
+            "emoji": "🐱",
+            "label": "Cat"
+          }
+        },
+        {
+          "question": "What is your go-to drink?",
+          "options": [
+            {
+              "emoji": "☕",
+              "label": "Coffee"
+            },
+            {
+              "emoji": "🍵",
+              "label": "Tea"
+            },
+            {
+              "emoji": "🥤",
+              "label": "Soda"
+            }
+          ],
+          "answer": {
+            "emoji": "☕",
+            "label": "Coffee"
+          }
+        },
+        {
+          "question": "Which activity do you enjoy the most?",
+          "options": [
+            {
+              "emoji": "🎨",
+              "label": "Painting"
+            },
+            {
+              "emoji": "🎮",
+              "label": "Gaming"
+            },
+            {
+              "emoji": "📚",
+              "label": "Reading"
+            }
+          ],
+          "answer": {
+            "emoji": "📚",
+            "label": "Reading"
+          }
+        },
+        {
+          "question": "Where would you rather go on vacation?",
+          "options": [
+            {
+              "emoji": "🏖️",
+              "label": "Beach"
+            },
+            {
+              "emoji": "🏔️",
+              "label": "Mountains"
+            },
+            {
+              "emoji": "🏙️",
+              "label": "City"
+            }
+          ],
+          "answer": {
+            "emoji": "🏔️",
+            "label": "Mountains"
+          }
+        }
+      ]
     }
   ]
 }

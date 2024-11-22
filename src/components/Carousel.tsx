@@ -24,7 +24,7 @@ const Carousel = () => {
                 quiz.map((value, i) =>
                   <div
                     key={i}
-                    className={`w-[13px] cursor-pointer h-[13px] mobile-dot rounded-[50%] ${(value.answer || i <= quizIndex) ? 'border-[#fff] border-[2px]' : 'bg-white'}`}
+                    className={`w-[13px] cursor-pointer h-[13px] mobile-dot rounded-[50%] ${(i === quizIndex) ? 'border-[#fff] border-[2px]' : 'bg-white'}`}
                     onClick={() => {
                       if (value.answer) {
                         setQuizIndex(i)
