@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --purple: rgb(111 83 255);
+  --white: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container-carousal{
+  height: 100dvh;
+  background-color: var(--white);
+  width: 100dvw;
+  display: flex;
+  flex-direction: row;
+
+  .mobile-screen {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .container-carousal{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    .mobile-screen {
+      width: 100dvw;
+      
+      div {
+        height: 50dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .book-image{
+    top: 10px;
+    left: 10px;
+    transform: translate(25px, -170px);
+  }
+
+  .mobile-dot{
+    width: 10px;
+    height: 10px !important;
+  }
+
+  .mobile-question{
+    padding-left: 20px;
+  }
+}
+
+.customPurple {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.custom-border-purple {
+  border-color: var(--purple);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: none;
+}
+
+.tooltip .tooltiptext {
+  opacity: 0;
+  width: 120px;
+  background-color: rgb(111 83 255);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -60px;
+  transition: opacity 500ms ease;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltiptext.no-after:after {
+  content: none;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+}
+
+.animate-x {
+  transition: myanimationposition 300ms ease;
+}
+
+@keyframes myanimationposition {
+  from {
+    transform: translateX(-600px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
