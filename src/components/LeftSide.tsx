@@ -3,10 +3,6 @@ import { MyContext } from '../context/provider';
 
 function LeftSide() {
     const {quiz, quizIndex, animate } = useContext(MyContext)!;
-    
-
-
-
 
   return (
     <div className={`flex justify-center items-center h-[100dvh] ${animate && 'animate-slideIn'}`}>
