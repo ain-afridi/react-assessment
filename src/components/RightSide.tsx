@@ -14,7 +14,7 @@ const RightSide = () => {
                             newQuiz[quizIndex].answer = option;
                             setQuiz(newQuiz);
                             setTimeout(() => {
-                                setQuizIndex(quiz.length - 1 === quizIndex ? 0 : quizIndex + 1);
+                                setQuizIndex(quizIndex + 1);
                             }, 400);
                         }}
                     >

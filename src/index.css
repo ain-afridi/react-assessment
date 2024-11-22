@@ -130,3 +130,36 @@ code {
     transform: translateX(0px);
   }
 }
+
+
+#summary-table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#summary-table td, #summary-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#summary-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#summary-table tr:hover {background-color: #ddd;}
+
+#summary-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.save-button{
+  padding: 10px 20px;
+  background-color: var(--purple);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+
+}
