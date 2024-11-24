@@ -1,46 +1,72 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React Assessment
 
-## Available Scripts
+This project is a React-based Carousel Application built with TypeScript and styled using Tailwind CSS. It implements a smooth vertical carousel for displaying dynamic content without relying on external carousel libraries. Additionally, the project includes a well-defined testing suite created with Jest and React Testing Library.
 
-In the project directory, you can run:
+## Project Structure
+```
+src/
+  ├── __test__/
+  │   ├── Carousel.test.tsx
+  │   ├── LeftSide.test.tsx
+  │   ├── Provider.test.tsx
+  │   ├── RightSide.test.tsx
+  │   ├── Summary.test.tsx
+  ├── components/
+  │   ├── Carousel.tsx
+  │   ├── LeftSide.tsx
+  │   ├── RightSide.tsx
+  │   ├── Summary.tsx
+  ├── context/
+  ├── svgs/
+  ├── utils/
+  ├── App.tsx
+  ├── index.css
+  ├── index.tsx
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/ain-afridi/react-assessment.git
+    ```
 
-### `npm run build`
+2. Navigate to the project directory:
+    ```
+    cd react-assessment
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install the dependencies:
+    ```sh
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Running the Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the project locally, use the following command:
+```sh
+npm start
+```
 
-### `npm run eject`
+### Building the Project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To build the project for production, use the following command:
+```sh
+npm run build
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Running Tests
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To run the tests, use the following command:
+```sh
+npm test
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you encounter any rendering errors while running the tests, you may need to install the following package:
+```sh
+npm install --save-dev @testing-library/react
