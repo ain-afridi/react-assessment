@@ -14,7 +14,7 @@ const Carousel = () => {
     <>
       {quizIndex === quiz.length ? (<Summary />)
         : (<div className="container-carousal flex">
-          <div className='mobile-screen customPurple relative'>
+          <div data-testid="left-side" className='mobile-screen customPurple relative'>
             <div className='absolute left-10 top-10 book-image'>
               <img src={assets.book} alt='book' width={30} height={30} />
             </div>
@@ -24,6 +24,7 @@ const Carousel = () => {
                 quiz.map((value, i) =>
                   <div
                     key={i}
+                    role='button'
                     className={`w-[13px] cursor-pointer h-[13px] mobile-dot rounded-[50%] ${(i === quizIndex) ? 'border-[#fff] border-[2px]' : 'bg-white'}`}
                     onClick={() => {
                       if (value.answer) {

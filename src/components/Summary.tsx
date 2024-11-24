@@ -1,23 +1,68 @@
 import React, { useContext, useState } from 'react'
 import { MyContext } from '../context/provider';
-import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const Summary = () => {
     const { quiz, setQuizIndex } = useContext(MyContext)!;
     const [loading, setLoading] = useState<boolean>(false)
 
+    // const handleSubmit = async () => {
+    //     setLoading(true);
+    //     const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(quiz),
+    //     });
+    //     console.log("res", response);
+        
+    //     if (!response.ok) {
+    //         throw new Error('Failed to submit survey');
+    //     }
+    //     const data = await response.json();
+
+    //     console.log("response", data);
+
+       
+
+    //     setTimeout(() => {
+    //         setLoading(false)
+    //         toast.success("Saved Successfully")
+    //     }, 3000);
+
+
+    // }
+
     const handleSubmit = async () => {
         setLoading(true);
-        const res = await axios.post('http://localhost:4000/quiz', { quiz });
-        console.log("response", res);
-
-        setTimeout(() => {
-            setLoading(false)
-            toast.success("Saved Successfully")
-        }, 3000);
-
-    }
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(quiz),
+            });
+    
+            if (response.status === 201) {
+                const data = await response.json();
+                console.log('response data:', data);
+                setTimeout(() => {
+                    setLoading(false);
+                    toast.success('Saved Successfully');
+                }, 3000);
+            } else {
+                // Gracefully handle failure by displaying an error toast
+                setLoading(false);
+                toast.error('Failed to submit survey. Please try again.');
+            }
+        } catch (error) {
+            setLoading(false);
+            toast.error('An error occurred. Please try again.');
+            console.error(error);
+        }
+    };
     return (
         <div className='flex flex-col gap-3 p-48 reveal-left relative'>
             <span
@@ -47,7 +92,9 @@ const Summary = () => {
             </table>
 
             <div className='w-[100%] text-right'>
-                <button className='save-button' disabled={loading} onClick={handleSubmit}>{loading ? <div className="loader"></div> : "Submit"}</button>
+                <button className='save-button' disabled={loading} onClick={handleSubmit}>
+                    {loading ? <div className="loader" data-testid="loader"></div> : "Submit"}
+                </button>
             </div>
         </div>
     )
