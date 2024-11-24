@@ -12,7 +12,7 @@ const RightSide = () => {
                 <div key={i} className={`tooltip`}>
                     <span
                         role="option"
-                        aria-selected={option.label.trim() === quiz[quizIndex].answer?.label.trim()}
+                        aria-selected={option.id === quiz[quizIndex].answer?.id}
                         className="relative inline-block text-[50px] cursor-pointer hover:text-[70px] transition-all duration-200"
                         onClick={() => {
                             const newQuiz = [...quiz];
@@ -24,13 +24,13 @@ const RightSide = () => {
                         }}
                     >
                         <span
-                            className={`flex items-center justify-center w-[90px] h-[90px] rounded-full custom-border-purple ${option.label.trim() === quiz[quizIndex].answer?.label.trim() ? 'border-4' : ''
+                            className={`flex items-center justify-center w-[90px] h-[90px] rounded-full custom-border-purple ${option.id === quiz[quizIndex].answer?.id ? 'border-4' : ''
                                 }`}
                         >
                             {option.emoji}
                         </span>
                     </span>
-                    <span className={`tooltiptext ${option.label.trim() === quiz[quizIndex].answer?.label.trim() && "!opacity-100 no-after"}`}>
+                    <span className={`tooltiptext ${option.id === quiz[quizIndex].answer?.id && "!opacity-100 no-after"}`}>
                         {option.label}
                     </span>
                 </div>

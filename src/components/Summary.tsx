@@ -6,34 +6,6 @@ const Summary = () => {
     const { quiz, setQuizIndex } = useContext(MyContext)!;
     const [loading, setLoading] = useState<boolean>(false)
 
-    // const handleSubmit = async () => {
-    //     setLoading(true);
-    //     const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify(quiz),
-    //     });
-    //     console.log("res", response);
-        
-    //     if (!response.ok) {
-    //         throw new Error('Failed to submit survey');
-    //     }
-    //     const data = await response.json();
-
-    //     console.log("response", data);
-
-       
-
-    //     setTimeout(() => {
-    //         setLoading(false)
-    //         toast.success("Saved Successfully")
-    //     }, 3000);
-
-
-    // }
-
     const handleSubmit = async () => {
         setLoading(true);
         try {

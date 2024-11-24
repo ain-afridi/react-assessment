@@ -9,8 +9,8 @@ const mockSetAnimate = jest.fn();
 
 const mockContextValue = {
     quiz: [
-      { question: 'Question 1', options: [{ emoji: '😀', label: 'Option 1' }], answer: { emoji: '😀', label: 'Option 1' } },
-      { question: 'Question 2', options: [{ emoji: '😁', label: 'Option 2' }], answer:  null },
+      { question: 'Question 1', options: [{ emoji: '😀', label: 'Option 1', id: 0 }], answer: { emoji: '😀', label: 'Option 1', id:1 } },
+      { question: 'Question 2', options: [{ emoji: '😁', label: 'Option 2', id: 1 }], answer:  null },
     ],
     setQuiz: mockSetQuiz,
     quizIndex: 0, // or any valid index
@@ -57,16 +57,29 @@ describe('Carousel Component', () => {
     expect(mockContextValue.setQuizIndex).toHaveBeenCalledWith(0);
   });
 
-  it('does not update quizIndex if quiz item answer is null', () => {
+  it('does not update quizIndex if both current and previous quiz item answers are null', () => {
+
+    const modifyContextValue = {
+      quiz: [
+        { question: 'Question 1', options: [{ emoji: '😀', label: 'Option 1', id: 0 }], answer: null },
+        { question: 'Question 2', options: [{ emoji: '😁', label: 'Option 2', id: 1 }], answer:  null },
+      ],
+      setQuiz: mockSetQuiz,
+      quizIndex: 0, // or any valid index
+      setQuizIndex: mockSetQuizIndex,
+      animate: false,
+      setAnimate: mockSetAnimate,
+    };
+  
     render(
-      <MyContext.Provider value={mockContextValue}>
+      <MyContext.Provider value={modifyContextValue}>
         <Carousel />
       </MyContext.Provider>
     );
-
+  
     const dots = screen.getAllByRole('button');
-    fireEvent.click(dots[1]); // Simulate click on a dot with no answer
-
+    fireEvent.click(dots[1]); // Simulate click on the second dot
+  
     expect(mockContextValue.setQuizIndex).not.toHaveBeenCalled();
   });
 });

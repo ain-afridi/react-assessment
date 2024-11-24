@@ -3,6 +3,7 @@ import { Dispatch, SetStateAction } from "react";
 export type Option = {
     emoji: string;
     label: string;
+    id: number;
   };
   
 export type QuizQuestion = {
@@ -19,3 +20,7 @@ export type ContextType = {
     animate: boolean;
     setAnimate: Dispatch<SetStateAction<boolean>>;
   } | null;
+
+  type ProviderProps = {
+    children: ReactNode;
+  };

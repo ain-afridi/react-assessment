@@ -11,8 +11,8 @@ describe('RightSide Component', () => {
     quiz: [
       {
         options: [
-          { label: 'Option 1', emoji: '😀' },
-          { label: 'Option 2', emoji: '😁' },
+          { label: 'Option 1', emoji: '😀', id: 0 },
+          { label: 'Option 2', emoji: '😁', id: 1 },
         ],
         answer: null,
       },
@@ -68,10 +68,10 @@ describe('RightSide Component', () => {
     expect(mockSetQuiz).toHaveBeenCalledWith([
       {
         options: [
-          { label: 'Option 1', emoji: '😀' },
-          { label: 'Option 2', emoji: '😁' },
+          { label: 'Option 1', emoji: '😀', id: 0 },
+          { label: 'Option 2', emoji: '😁', id: 1 },
         ],
-        answer: { label: 'Option 1', emoji: '😀' },
+        answer: { label: 'Option 1', emoji: '😀', id: 0 },
       },
     ]);
 
@@ -87,10 +87,10 @@ describe('RightSide Component', () => {
       quiz: [
         {
           options: [
-            { label: 'Option 1', emoji: '😀' },
-            { label: 'Option 2', emoji: '😁' },
+            { label: 'Option 1', emoji: '😀', id: 0 },
+            { label: 'Option 2', emoji: '😁', id: 1 },
           ],
-          answer: { label: 'Option 1', emoji: '😀' },
+          answer: { label: 'Option 1', emoji: '😀', id: 0 },
         },
       ],
     };

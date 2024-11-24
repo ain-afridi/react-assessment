@@ -19,8 +19,8 @@ const mockSetAnimate = jest.fn();
 
 const mockContextValue = {
     quiz: [
-      { question: 'Question 1', options: [{ emoji: '😀', label: 'Option 1' }], answer: { emoji: '😀', label: 'Option 1' } },
-      { question: 'Question 2', options: [{ emoji: '😁', label: 'Option 2' }], answer: { emoji: '😁', label: 'Option 2' } },
+      { question: 'Question 1', options: [{ emoji: '😀', label: 'Option 1', id: 0 }], answer: { emoji: '😀', label: 'Option 1', id: 0 } },
+      { question: 'Question 2', options: [{ emoji: '😁', label: 'Option 2', id: 1 }], answer: { emoji: '😁', label: 'Option 2', id: 1 } },
     ],
     setQuiz: mockSetQuiz,
     quizIndex: 0, // or any valid index
